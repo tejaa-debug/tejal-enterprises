@@ -1,0 +1,2111 @@
+/* =========================================================
+   TEJAL ENTERPRISES
+   COMPLETE WEBSITE CSS
+   Theme: Royal Blue + Red + White
+========================================================= */
+
+
+/* =========================================================
+   1. RESET & BASIC
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   2. COLORS
+========================================================= */
+
+:root {
+
+    --blue: #073b8f;
+
+    --dark-blue: #05275f;
+
+    --red: #e31b23;
+
+    --dark-red: #b90f16;
+
+    --dark: #151515;
+
+    --gray: #666666;
+
+    --light-gray: #f5f7fa;
+
+    --white: #ffffff;
+}
+
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+
+    width: 92%;
+    max-width: 1400px;
+
+    height: 95px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo img {
+    width: 125px;
+    height: auto;
+}
+
+
+/* Navigation */
+
+.nav-links ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+
+    list-style: none;
+}
+
+.nav-links ul li {
+    list-style: none;
+}
+
+.nav-links a {
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff3333;
+}
+
+
+
+
+
+/* Mobile icons */
+
+.menu-icon,
+.close-menu {
+
+    display: none;
+
+    color: white;
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   4. HERO SECTION
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.68),
+            rgba(0, 25, 70, 0.78)
+        );
+
+    background-color: #061c42;
+}
+
+.hero-content {
+
+    max-width: 900px;
+
+    padding: 30px;
+
+    color: white;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.small-title {
+
+    color: #ff3b43;
+
+    letter-spacing: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    margin-top: 10px;
+
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: #ff2931;
+}
+
+.hero-subtitle {
+
+    font-size: 22px;
+
+    margin-top: 10px;
+
+    font-weight: 400;
+}
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    line-height: 1.8;
+
+    color: #dddddd;
+
+    font-size: 14px;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.primary-btn {
+
+    background: var(--red);
+
+    color: white;
+
+    border: 1px solid var(--red);
+}
+
+.primary-btn:hover {
+
+    background: var(--dark-red);
+
+    border-color: var(--dark-red);
+
+    transform: translateY(-3px);
+}
+
+.outline-btn {
+
+    border: 1px solid white;
+
+    color: white;
+}
+
+.outline-btn:hover {
+
+    background: var(--blue);
+
+    border-color: var(--blue);
+}
+
+
+/* Scroll button */
+
+.scroll-down {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    color: white;
+
+    font-size: 25px;
+
+    animation: scrollDown 1.5s infinite;
+}
+
+@keyframes scrollDown {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   5. COMMON SECTION
+========================================================= */
+
+.section {
+
+    padding: 100px 7%;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-title p {
+
+    color: var(--red);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    margin-top: 8px;
+
+    color: #222222;
+}
+
+.section-title h2 span {
+    color: var(--blue);
+}
+
+.section-title.light h2 {
+    color: white;
+}
+
+.line {
+
+    width: 60px;
+
+    height: 3px;
+
+    background:
+
+        linear-gradient(
+            to right,
+            var(--blue) 50%,
+            var(--red) 50%
+        );
+
+    margin: 15px auto;
+}
+
+
+/* =========================================================
+   6. ABOUT
+========================================================= */
+
+.about {
+    background: white;
+}
+
+.about-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f4f6f9;
+
+    min-height: 380px;
+
+    padding: 30px;
+}
+
+.about-image img {
+
+    width: 90%;
+
+    max-width: 500px;
+}
+
+.about-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    color: var(--blue);
+}
+
+.about-content p {
+
+    color: var(--gray);
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+}
+
+
+/* About points */
+
+.about-points {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.about-points div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+.about-points i {
+    color: var(--red);
+}
+
+
+/* =========================================================
+   7. MISSION & VISION
+========================================================= */
+
+.mission-section {
+
+    padding: 100px 7%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #061f4f,
+            #07152e
+        );
+}
+
+.mission-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.mission-card {
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    transition: 0.4s;
+}
+
+.mission-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--red);
+}
+
+.mission-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: auto auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background: var(--red);
+
+    font-size: 28px;
+}
+
+.mission-card h3 {
+
+    color: white;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+
+    color: #bbbbbb;
+
+    line-height: 1.8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   8. SERVICES
+========================================================= */
+
+.services {
+    background: #f6f8fb;
+}
+
+.services-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-top: 4px solid var(--blue);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+    transition: 0.4s;
+}
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    border-top-color: var(--red);
+}
+
+.service-icon {
+
+    font-size: 40px;
+
+    color: var(--blue);
+
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+
+    color: #222;
+}
+
+.service-card p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   9. PEOPLE
+========================================================= */
+
+.people {
+    background: white;
+}
+
+.people-grid {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.person-card {
+
+    background: #f7f8fa;
+
+    border: 1px solid #e5e5e5;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+.person-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--blue);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Person image area */
+
+.person-image {
+
+    height: 230px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--red)
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.person-placeholder {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: var(--blue);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* Person information */
+
+.person-info {
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.person-info span {
+
+    color: var(--red);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.person-info h3 {
+
+    color: var(--blue);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    margin: 8px 0;
+}
+
+.person-info h4 {
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
+.person-info p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+.person-info strong {
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   10. VIDEO SECTION
+========================================================= */
+
+.video-section {
+
+    padding: 100px 7%;
+
+    background: #071a3d;
+}
+
+.video-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.video-card {
+
+    background: black;
+
+    aspect-ratio: 9 / 16;
+
+    overflow: hidden;
+
+    border: 2px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.video-card:hover {
+
+    border-color: var(--red);
+
+    transform: translateY(-5px);
+}
+
+.video-card video {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.video-note {
+
+    text-align: center;
+
+    color: #aaaaaa;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   11. INSTAGRAM
+========================================================= */
+
+.instagram {
+
+    padding: 90px 7%;
+
+    text-align: center;
+
+    background: white;
+}
+
+.section-description {
+
+    color: #777777;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+.instagram-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #073b8f,
+            #e31b23
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.instagram-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(7, 59, 143, 0.25);
+}
+
+
+/* =========================================================
+   12. CONTACT
+========================================================= */
+
+.contact {
+    background: #f6f8fb;
+}
+
+.contact-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+}
+
+.contact-info h3 {
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--blue);
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+
+    color: #777777;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+    font-size: 14px;
+}
+
+
+/* Contact item */
+
+.contact-item {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+.contact-item > i {
+
+    color: var(--red);
+
+    font-size: 23px;
+
+    min-width: 25px;
+}
+
+.contact-item span {
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.contact-item p {
+
+    font-size: 13px;
+
+    margin-top: 3px;
+
+    color: #444;
+
+    line-height: 1.6;
+}
+
+
+/* Contact Instagram */
+
+.contact-social a {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+.contact-social a:hover {
+
+    background: var(--red);
+
+    transform: translateY(-3px);
+}
+
+
+/* Contact form */
+
+.contact-form {
+
+    background: white;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #dddddd;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    background: white;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+
+    border-color: var(--blue);
+}
+
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+footer {
+
+    background: #07152e;
+
+    color: white;
+
+    padding: 50px 7% 20px;
+}
+
+.footer-content {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* Footer business name */
+
+.footer-brand h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+
+/* ENTERPRISES red */
+
+.footer-brand h1 span {
+    color: var(--red);
+}
+
+.footer-brand p {
+
+    color: #aaaaaa;
+
+    font-size: 12px;
+}
+
+
+/* Footer links */
+
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+
+    color: #aaaaaa;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* Footer Instagram */
+
+.footer-social a {
+
+    color: white;
+
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--red);
+}
+
+
+/* Copyright */
+
+.copyright {
+
+    border-top: 1px solid #263858;
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   14. LOGIN PAGE
+========================================================= */
+
+.login-page {
+
+    min-height: 100vh;
+
+    background: #f4f6f9;
+}
+
+.login-wrapper {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+}
+
+
+/* =========================================================
+   15. LOGIN LEFT SIDE
+========================================================= */
+
+.login-left {
+
+    position: relative;
+
+    padding: 50px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #05275f,
+            #073b8f
+        );
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.login-left::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(227, 27, 35, 0.18);
+
+    right: -180px;
+
+    bottom: -150px;
+}
+
+
+/* Login logo */
+
+.login-logo {
+
+    width: 230px;
+
+    background: white;
+
+    padding: 8px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* Login message */
+
+.login-message {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 500px;
+}
+
+.login-small-title {
+
+    color: #ff3941;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 700;
+}
+
+.login-message h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 65px;
+
+    line-height: 1.05;
+
+    margin: 15px 0;
+}
+
+.login-message h1 span {
+    color: #ff3038;
+}
+
+.login-message > p {
+
+    color: #dbe4f2;
+
+    line-height: 1.8;
+
+    max-width: 430px;
+
+    font-size: 14px;
+}
+
+
+/* Login features */
+
+.login-features {
+    margin-top: 35px;
+}
+
+.login-features div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.login-features i {
+
+    color: #ff333b;
+
+    font-size: 22px;
+}
+
+.login-features span {
+    font-size: 13px;
+}
+
+
+/* Back home */
+
+.back-home {
+
+    color: white;
+
+    font-size: 13px;
+
+    position: relative;
+
+    z-index: 5;
+
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    color: #ff3941;
+}
+
+
+/* =========================================================
+   16. LOGIN RIGHT SIDE
+========================================================= */
+
+.login-right {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+}
+
+.login-box {
+
+    width: 100%;
+
+    max-width: 480px;
+}
+
+.login-box > h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    color: var(--blue);
+}
+
+.login-description {
+
+    color: #777777;
+
+    font-size: 13px;
+
+    margin: 5px 0 25px;
+}
+
+
+/* =========================================================
+   17. ACCOUNT TYPE
+========================================================= */
+
+.account-types {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.account-type {
+
+    padding: 17px 10px;
+
+    background: white;
+
+    border: 1px solid #dddddd;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    color: #555555;
+
+    transition: 0.3s;
+}
+
+.account-type i {
+    font-size: 20px;
+}
+
+.account-type.active {
+
+    background: var(--blue);
+
+    color: white;
+
+    border-color: var(--blue);
+}
+
+.account-type:hover {
+    border-color: var(--red);
+}
+
+
+/* =========================================================
+   18. ROLE LOGIN
+========================================================= */
+
+.role-login {
+
+    background: white;
+
+    padding: 30px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+
+    border-top: 4px solid var(--red);
+}
+
+.role-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.role-title > i {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef3fb;
+
+    color: var(--blue);
+
+    font-size: 22px;
+}
+
+.role-title h3 {
+
+    color: var(--blue);
+
+    font-size: 18px;
+}
+
+.role-title p {
+
+    color: #888888;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   19. LOGIN INPUT
+========================================================= */
+
+.login-input {
+
+    position: relative;
+
+    margin-bottom: 15px;
+}
+
+.login-input > i:first-child {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 15px;
+
+    color: var(--blue);
+}
+
+.login-input input {
+
+    width: 100%;
+
+    padding: 14px 45px;
+
+    border: 1px solid #dddddd;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+.login-input input:focus {
+    border-color: var(--blue);
+}
+
+.password-icon {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 15px;
+
+    cursor: pointer;
+
+    color: #777777;
+}
+
+
+/* =========================================================
+   20. LOGIN BUTTON
+========================================================= */
+
+.main-login-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--red)
+        );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.3s;
+}
+
+.main-login-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(7, 59, 143, 0.2);
+}
+
+
+/* =========================================================
+   21. WORKER LINKS
+========================================================= */
+
+.worker-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+.worker-links a {
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.worker-links a:hover {
+    color: var(--red);
+}
+
+
+/* Login footer */
+
+.login-footer-text {
+
+    text-align: center;
+
+    color: #999999;
+
+    font-size: 10px;
+
+    margin-top: 25px;
+}
+
+
+/* Mobile logo */
+
+.mobile-login-logo {
+    display: none;
+}
+
+
+/* =========================================================
+   22. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+
+    /* Navbar */
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 0;
+
+        right: -280px;
+
+        width: 280px;
+
+        height: 100vh;
+
+        background: #07152e;
+
+        padding-top: 80px;
+
+        transition: 0.4s;
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links ul {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px 35px;
+
+        gap: 25px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .close-menu {
+
+        display: block;
+
+        position: absolute;
+
+        right: 25px;
+
+        top: 25px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+
+    /* About */
+
+    .about-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Mission */
+
+    .mission-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Services */
+
+    .services-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    /* Contact */
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    /* Login */
+
+    .login-wrapper {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .login-left {
+        display: none;
+    }
+
+    .login-right {
+
+        min-height: 100vh;
+
+        padding: 40px 25px;
+    }
+
+    .mobile-login-logo {
+
+        display: block;
+
+        text-align: center;
+
+        margin-bottom: 25px;
+    }
+
+    .mobile-login-logo img {
+
+        width: 190px;
+
+        margin: auto;
+    }
+
+    .login-box > h2 {
+        text-align: center;
+    }
+
+    .login-description {
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   23. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    /* Navbar */
+
+    .navbar {
+        height: 80px;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        background-size: 350px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 43px;
+
+    }
+
+    .hero-subtitle {
+
+        font-size: 17px;
+
+    }
+
+    .hero-description {
+
+        font-size: 13px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .hero-buttons .btn {
+
+        width: 200px;
+
+    }
+
+
+    /* Sections */
+
+    .section {
+
+        padding: 70px 5%;
+
+    }
+
+    .mission-section {
+
+        padding: 70px 5%;
+
+    }
+
+    .video-section {
+
+        padding: 70px 5%;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    /* About */
+
+    .about-image {
+
+        min-height: 250px;
+
+    }
+
+    .about-content h3 {
+
+        font-size: 28px;
+
+    }
+
+
+    /* About points */
+
+    .about-points {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Services */
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* People */
+
+    .people-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* Videos */
+
+    .video-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .video-card {
+
+        max-width: 330px;
+
+        width: 100%;
+
+        margin: auto;
+
+    }
+
+
+    /* Contact */
+
+    .contact-form {
+
+        padding: 25px 20px;
+
+    }
+
+
+    /* Footer */
+
+    .footer-brand h1 {
+
+        font-size: 27px;
+
+    }
+
+    .footer-links {
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+
+    /* Login */
+
+    .login-right {
+
+        padding: 20px 15px;
+
+    }
+
+    .login-box > h2 {
+
+        font-size: 32px;
+
+    }
+
+    .account-types {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .role-login {
+
+        padding: 22px;
+
+    }
+
+}
+
+
+/* =========================================================
+   24. VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .person-info h3 {
+        font-size: 22px;
+    }
+
+    .login-right {
+        padding: 15px 10px;
+    }
+
+    .role-login {
+        padding: 18px;
+    }
+
+}
